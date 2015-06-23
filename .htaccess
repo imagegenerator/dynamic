@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteRule ^([\d].*) code.php?x=$1
 
-#Standard Ad Sizes http://www.iab.net/iab_products_and_industry_services/1421/1443/1452
+##Standard Ad Sizes http://www.iab.net/iab_products_and_industry_services/1421/1443/1452
 
 #Medium Rectangle 300x250
 RewriteRule ^(me)\w+(rec\w+)(.*) code.php?x=300x250$3
