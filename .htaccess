@@ -1,13 +1,3 @@
-<Files ~ "^.*\.([Hh][Tt][Aa])">
-order allow,deny
-deny from all
-satisfy all
-</Files>
-
-<FilesMatch "^(wp-config\.php|php\.ini|php5\.ini|install\.php|php\.info|readme\.html|bb-config\.php|\.htaccess|readme\.txt|error_log|error\.log|#PHP_errors\.log|\.svn)">
- Deny from all
-</FilesMatch>
-
 Options -Indexes
 
 RewriteEngine On
