@@ -1,6 +1,4 @@
-# Header unset Cache-Control
-Header unset Cache-Control "private"
-Header set Cache-Control "public"
+Header unset Cache-Control
 RewriteEngine On
 RewriteRule ^([\d].*) code.php?x=$1
 
@@ -124,6 +122,8 @@ RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
     ExpiresByType application/x-javascript "access plus 2592000 seconds"
     ExpiresByType text/html "access plus 2592000 seconds"
     ExpiresByType application/xhtml+xml "access plus 2592000 seconds"
+	ExpiresByType application/x-httpd-php "access plus 2592000 seconds"
+	ExpiresByType application/x-httpd-fastphp "access plus 2592000 seconds"
 </IfModule>
 
 ##### Cache-Control
@@ -133,10 +133,6 @@ RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
 #        Header set Last-Modified "Mon, 24 Mar 2014 00:00:00 GMT"
     </FilesMatch>
     <FilesMatch "\\.(css|js)$">
-        Header set Cache-Control "max-age=2592000, public"
-#        Header set Last-Modified "Mon, 24 Mar 2014 00:00:00 GMT"
-    </FilesMatch>
-    <FilesMatch "\\.(x?html?|php|xml)$">
         Header set Cache-Control "max-age=2592000, public"
 #        Header set Last-Modified "Mon, 24 Mar 2014 00:00:00 GMT"
     </FilesMatch>
