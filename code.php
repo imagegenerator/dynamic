@@ -145,7 +145,8 @@ imagettftext($img, $fontsize, $text_angle, $textX, $textY, $fg_color, $font, $te
 $offset = 60 * 60 * 24 * 30; //30 Days
 $ExpStr = "Expires: " . gmdate("D, d M Y H:i:s", time() + $offset) . " GMT";
 header($ExpStr); //Set a far future expire date. This keeps the image locally cached by the user for less hits to the server.
-header('Cache-Control:	public, max-age=2592000');
+header_remove("Cache-Control");
+header('Cache-Control:	max-age=2592000, s-maxage=2592000');
 header("Last-Modified: " . gmdate("D, d M Y H:i:s", time() - $offset) . " GMT");
 header('Content-type: image/'.$file_format); //Set the header so the browser can interpret it as an image and not a bunch of weird text.
 
