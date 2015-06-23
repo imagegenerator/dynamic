@@ -1,3 +1,4 @@
+Header unset Cache-Control
 RewriteEngine On
 RewriteRule ^([\d].*) code.php?x=$1
 
@@ -103,3 +104,5 @@ RewriteRule ^(hd720)(.*) code.php?x=1280x720$2
 
 #HD1080 1920x1080
 RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
+
+# Header set Cache-Control "public, max-age=2592000"
