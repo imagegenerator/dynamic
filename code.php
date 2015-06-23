@@ -149,6 +149,7 @@ header_remove("Cache-Control");
 header('Cache-Control:	public, max-age=2592000, s-maxage=2592000');
 header("Last-Modified: " . gmdate("D, d M Y H:i:s", time() - $offset) . " GMT");
 header('Content-type: image/'.$file_format); //Set the header so the browser can interpret it as an image and not a bunch of weird text.
+header_remove("Server");
 
 //Create the final image based on the provided file format.
 switch ($file_format) {
