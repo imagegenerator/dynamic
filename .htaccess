@@ -136,6 +136,11 @@ RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
         Header set Cache-Control "max-age=2592000, public"
 #        Header set Last-Modified "Mon, 24 Mar 2014 00:00:00 GMT"
     </FilesMatch>
+    <FilesMatch "\\.(x?html?|php|xml)$">
+		Header unset Cache-Control "private"
+        Header set Cache-Control "max-age=2592000, s-maxage=2592000"
+#        Header set Last-Modified "Mon, 24 Mar 2014 00:00:00 GMT"
+    </FilesMatch>
 </IfModule>
 
 ##### ETags
