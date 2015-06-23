@@ -124,7 +124,7 @@ RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
 #    ExpiresByType application/xhtml+xml "access plus 600 seconds"
 </IfModule>
 
-#### Cache-Control
+##### Cache-Control
 <IfModule mod_headers.c>
     <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
         Header set Cache-Control "max-age=2592000, public"
@@ -140,7 +140,7 @@ RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
 #    </FilesMatch>
 </IfModule>
 
-#### ETags
+##### ETags
 <IfModule mod_headers.c>
     Header unset ETag
 </IfModule>
