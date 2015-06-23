@@ -127,7 +127,7 @@ RewriteRule ^(hd1080)(.*) code.php?x=1920x1080$2
 
 ##### Cache-Control
 <IfModule mod_headers.c>
-	Header unset Cache-Control
+#	Header unset Cache-Control
     <FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
         Header set Cache-Control "max-age=2592000, public"
 #        Header set Last-Modified "Mon, 24 Mar 2014 00:00:00 GMT"
