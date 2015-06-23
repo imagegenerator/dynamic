@@ -1,4 +1,6 @@
-Header unset Cache-Control
+# Header unset Cache-Control
+Header unset Cache-Control "private"
+Header set Cache-Control "public"
 RewriteEngine On
 RewriteRule ^([\d].*) code.php?x=$1
 
